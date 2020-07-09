@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>TestNG:  OrangeHRM</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>OrangeHRM</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 09 20:36:56 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>107 seconds (107470 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testScripts.AdminLogin.orageHRM_admin_login()'><b>orageHRM_admin_login</b><br>Test class: testScripts.AdminLogin<br/>
+<a href="#Output-1865219266" onClick='toggleBox("Output-1865219266", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1865219266" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1865219266">
+Browser Initialized<br/>
+<br>Url Loaded<br/>
+<br>Application logged in<br/>
+<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.AdminLogin_09_07_2020_20_37_17.jpeg' height='300' width='300'/><br><br/>
+<br>Validating the Welcome Message<br/>
+<br>Browser Closed<br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>testScripts.AdminLogin@3ffc5af1</td></tr>
+<tr>
+<td title='testScripts.CreateUser.orageHRM_create_user()'><b>orageHRM_create_user</b><br>Test class: testScripts.CreateUser<br/>
+<a href="#Output-609483101" onClick='toggleBox("Output-609483101", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-609483101" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-609483101">
+Browser Initialized<br/>
+<br>Url Loaded<br/>
+<br>Application logged in<br/>
+<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.CreateUser_09_07_2020_20_37_45.jpeg' height='300' width='300'/><br><br/>
+<br>Validating the Username after Save<br/>
+<br>Browser Closed<br/>
+</div>
+</td>
+<td></td>
+<td>22</td>
+<td>testScripts.CreateUser@5e5792a0</td></tr>
+<tr>
+<td title='testScripts.DeleteUser.orageHRM_delete_user()'><b>orageHRM_delete_user</b><br>Test class: testScripts.DeleteUser<br/>
+<a href="#Output-1465179762" onClick='toggleBox("Output-1465179762", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1465179762" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1465179762">
+Browser Initialized<br/>
+<br>Url Loaded<br/>
+<br>Application logged in<br/>
+<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.DeleteUser_09_07_2020_20_38_42.jpeg' height='300' width='300'/><br><br/>
+<br>Validating the Username  after Deletion<br/>
+<br>Browser Closed<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>testScripts.DeleteUser@3532ec19</td></tr>
+<tr>
+<td title='testScripts.EditUser.orageHRM_edit_user()'><b>orageHRM_edit_user</b><br>Test class: testScripts.EditUser<br/>
+<a href="#Output-790229674" onClick='toggleBox("Output-790229674", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-790229674" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-790229674">
+Browser Initialized<br/>
+<br>Url Loaded<br/>
+<br>Application logged in<br/>
+<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.EditUser_09_07_2020_20_38_18.jpeg' height='300' width='300'/><br><br/>
+<br>Validating the Username  and user role after Edit<br/>
+<br>Browser Closed<br/>
+</div>
+</td>
+<td></td>
+<td>28</td>
+<td>testScripts.EditUser@26653222</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+    <line>
+      <![CDATA[Browser Initialized]]>
+    </line>
+    <line>
+      <![CDATA[<br>Url Loaded]]>
+    </line>
+    <line>
+      <![CDATA[<br>Application logged in]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.AdminLogin_09_07_2020_20_37_17.jpeg' height='300' width='300'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Validating the Welcome Message]]>
+    </line>
+    <line>
+      <![CDATA[<br>Browser Closed]]>
+    </line>
+    <line>
+      <![CDATA[Browser Initialized]]>
+    </line>
+    <line>
+      <![CDATA[<br>Url Loaded]]>
+    </line>
+    <line>
+      <![CDATA[<br>Application logged in]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.CreateUser_09_07_2020_20_37_45.jpeg' height='300' width='300'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Validating the Username after Save]]>
+    </line>
+    <line>
+      <![CDATA[<br>Browser Closed]]>
+    </line>
+    <line>
+      <![CDATA[Browser Initialized]]>
+    </line>
+    <line>
+      <![CDATA[<br>Url Loaded]]>
+    </line>
+    <line>
+      <![CDATA[<br>Application logged in]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.EditUser_09_07_2020_20_38_18.jpeg' height='300' width='300'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Validating the Username  and user role after Edit]]>
+    </line>
+    <line>
+      <![CDATA[<br>Browser Closed]]>
+    </line>
+    <line>
+      <![CDATA[Browser Initialized]]>
+    </line>
+    <line>
+      <![CDATA[<br>Url Loaded]]>
+    </line>
+    <line>
+      <![CDATA[<br>Application logged in]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.DeleteUser_09_07_2020_20_38_42.jpeg' height='300' width='300'/><br>]]>
+    </line>
+    <line>
+      <![CDATA[<br>Validating the Username  after Deletion]]>
+    </line>
+    <line>
+      <![CDATA[<br>Browser Closed]]>
+    </line>
+  </reporter-output>
+  <suite name="first" duration-ms="107470" started-at="2020-07-09T15:06:56Z" finished-at="2020-07-09T15:08:43Z">
+    <groups>
+    </groups>
+    <test name="OrangeHRM" duration-ms="107470" started-at="2020-07-09T15:06:56Z" finished-at="2020-07-09T15:08:43Z">
+      <class name="testScripts.DeleteUser">
+        <test-method status="PASS" signature="load(org.testng.ITestResult)[pri:0, instance:testScripts.DeleteUser@3532ec19]" name="load" is-config="true" duration-ms="3694" started-at="2020-07-09T20:38:19Z" finished-at="2020-07-09T20:38:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=orageHRM_delete_user status=SUCCESS method=DeleteUser.orageHRM_delete_user()[pri:0, instance:testScripts.DeleteUser@3532ec19] output=Browser Initialized]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- load -->
+        <test-method status="PASS" signature="orageHRM_delete_user()[pri:0, instance:testScripts.DeleteUser@3532ec19]" name="orageHRM_delete_user" duration-ms="20038" started-at="2020-07-09T20:38:23Z" finished-at="2020-07-09T20:38:43Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser Initialized]]>
+            </line>
+            <line>
+              <![CDATA[<br>Url Loaded]]>
+            </line>
+            <line>
+              <![CDATA[<br>Application logged in]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.DeleteUser_09_07_2020_20_38_42.jpeg' height='300' width='300'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Validating the Username  after Deletion]]>
+            </line>
+            <line>
+              <![CDATA[<br>Browser Closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- orageHRM_delete_user -->
+        <test-method status="PASS" signature="cleanup(org.testng.ITestResult)[pri:0, instance:testScripts.DeleteUser@3532ec19]" name="cleanup" is-config="true" duration-ms="738" started-at="2020-07-09T20:38:43Z" finished-at="2020-07-09T20:38:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=orageHRM_delete_user status=SUCCESS method=DeleteUser.orageHRM_delete_user()[pri:0, instance:testScripts.DeleteUser@3532ec19] output=Browser Initialized]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- testScripts.DeleteUser -->
+      <class name="testScripts.CreateUser">
+        <test-method status="PASS" signature="load(org.testng.ITestResult)[pri:0, instance:testScripts.CreateUser@5e5792a0]" name="load" is-config="true" duration-ms="3728" started-at="2020-07-09T20:37:19Z" finished-at="2020-07-09T20:37:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=orageHRM_create_user status=SUCCESS method=CreateUser.orageHRM_create_user()[pri:0, instance:testScripts.CreateUser@5e5792a0] output=Browser Initialized]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- load -->
+        <test-method status="PASS" signature="orageHRM_create_user()[pri:0, instance:testScripts.CreateUser@5e5792a0]" name="orageHRM_create_user" duration-ms="22732" started-at="2020-07-09T20:37:23Z" finished-at="2020-07-09T20:37:45Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser Initialized]]>
+            </line>
+            <line>
+              <![CDATA[<br>Url Loaded]]>
+            </line>
+            <line>
+              <![CDATA[<br>Application logged in]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.CreateUser_09_07_2020_20_37_45.jpeg' height='300' width='300'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Validating the Username after Save]]>
+            </line>
+            <line>
+              <![CDATA[<br>Browser Closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- orageHRM_create_user -->
+        <test-method status="PASS" signature="cleanup(org.testng.ITestResult)[pri:0, instance:testScripts.CreateUser@5e5792a0]" name="cleanup" is-config="true" duration-ms="928" started-at="2020-07-09T20:37:45Z" finished-at="2020-07-09T20:37:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=orageHRM_create_user status=SUCCESS method=CreateUser.orageHRM_create_user()[pri:0, instance:testScripts.CreateUser@5e5792a0] output=Browser Initialized]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- testScripts.CreateUser -->
+      <class name="testScripts.EditUser">
+        <test-method status="PASS" signature="load(org.testng.ITestResult)[pri:0, instance:testScripts.EditUser@26653222]" name="load" is-config="true" duration-ms="3636" started-at="2020-07-09T20:37:46Z" finished-at="2020-07-09T20:37:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=orageHRM_edit_user status=SUCCESS method=EditUser.orageHRM_edit_user()[pri:0, instance:testScripts.EditUser@26653222] output=Browser Initialized]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- load -->
+        <test-method status="PASS" signature="orageHRM_edit_user()[pri:0, instance:testScripts.EditUser@26653222]" name="orageHRM_edit_user" duration-ms="28224" started-at="2020-07-09T20:37:50Z" finished-at="2020-07-09T20:38:18Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser Initialized]]>
+            </line>
+            <line>
+              <![CDATA[<br>Url Loaded]]>
+            </line>
+            <line>
+              <![CDATA[<br>Application logged in]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.EditUser_09_07_2020_20_38_18.jpeg' height='300' width='300'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Validating the Username  and user role after Edit]]>
+            </line>
+            <line>
+              <![CDATA[<br>Browser Closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- orageHRM_edit_user -->
+        <test-method status="PASS" signature="cleanup(org.testng.ITestResult)[pri:0, instance:testScripts.EditUser@26653222]" name="cleanup" is-config="true" duration-ms="736" started-at="2020-07-09T20:38:18Z" finished-at="2020-07-09T20:38:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=orageHRM_edit_user status=SUCCESS method=EditUser.orageHRM_edit_user()[pri:0, instance:testScripts.EditUser@26653222] output=Browser Initialized]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- testScripts.EditUser -->
+      <class name="testScripts.AdminLogin">
+        <test-method status="PASS" signature="load(org.testng.ITestResult)[pri:0, instance:testScripts.AdminLogin@3ffc5af1]" name="load" is-config="true" duration-ms="5468" started-at="2020-07-09T20:36:56Z" finished-at="2020-07-09T20:37:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=orageHRM_admin_login status=SUCCESS method=AdminLogin.orageHRM_admin_login()[pri:0, instance:testScripts.AdminLogin@3ffc5af1] output=Browser Initialized]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- load -->
+        <test-method status="PASS" signature="orageHRM_admin_login()[pri:0, instance:testScripts.AdminLogin@3ffc5af1]" name="orageHRM_admin_login" duration-ms="16023" started-at="2020-07-09T20:37:02Z" finished-at="2020-07-09T20:37:18Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser Initialized]]>
+            </line>
+            <line>
+              <![CDATA[<br>Url Loaded]]>
+            </line>
+            <line>
+              <![CDATA[<br>Application logged in]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.AdminLogin_09_07_2020_20_37_17.jpeg' height='300' width='300'/><br>]]>
+            </line>
+            <line>
+              <![CDATA[<br>Validating the Welcome Message]]>
+            </line>
+            <line>
+              <![CDATA[<br>Browser Closed]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- orageHRM_admin_login -->
+        <test-method status="PASS" signature="cleanup(org.testng.ITestResult)[pri:0, instance:testScripts.AdminLogin@3ffc5af1]" name="cleanup" is-config="true" duration-ms="1493" started-at="2020-07-09T20:37:18Z" finished-at="2020-07-09T20:37:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=orageHRM_admin_login status=SUCCESS method=AdminLogin.orageHRM_admin_login()[pri:0, instance:testScripts.AdminLogin@3ffc5af1] output=Browser Initialized]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- testScripts.AdminLogin -->
+    </test> <!-- OrangeHRM -->
+  </suite> <!-- first -->
+</testng-results>

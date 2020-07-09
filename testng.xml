@@ -1,0 +1,19 @@
+<suite name="first">
+<listeners>
+        <listener class-name="reporting.CustomTestNGReporter" />
+    </listeners>
+	<test name="OrangeHRM">
+		<classes>
+			<class name="testScripts.AdminLogin"/>
+			
+			<class name="testScripts.CreateUser"/>
+			<class name="testScripts.EditUser"/>
+			<class name="testScripts.DeleteUser"/> 
+		</classes>
+	
+	</test>
+
+</suite>
+
+
+<!-- This is a comment --> 

@@ -1,5 +1,6 @@
 package testScripts;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -37,11 +38,11 @@ public class CreateUser extends Base {
 	@BeforeMethod
 	public void load(ITestResult result) throws IOException {
 		b = new Base();
-		screenshotFilePath = b.getMapData("screenshotFilePath", 0);
-		reportspath = b.getMapData("reportspath", 0);
+		screenshotFilePath = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"libraries"+File.separator+"screenshots"+File.separator).replace("\\", "/") ;
+		reportspath=(System.getProperty("user.dir")+File.separator+"src"+File.separator+"libraries"+File.separator+"reports"+File.separator).replace("\\", "/") ;
 		URL = b.getMapData("URL",1);
 		user_url=b.getMapData("user_url",1);
-		intialReport = b.getMapData("intialReport", 0);
+		intialReport=(System.getProperty("user.dir")+File.separator+"test-output"+File.separator+"OrangeHRM-emailable-report-template.html").replace("\\", "/") ;
 		intialize("chrome");
 		Reporter.setCurrentTestResult(result);
 		Reporter.log("Browser Initialized");

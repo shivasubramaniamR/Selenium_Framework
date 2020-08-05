@@ -27,7 +27,9 @@ import org.testng.xml.XmlSuite;
 public class CustomTestNGReporter implements IReporter {
 	
 	//This is the customize emailabel report template file path.
-	private static final String emailableReportTemplateFile = "E:\\workspace\\orangehrm\\src\\reporting\\OrangeHRM-emailable-report-template.html";
+	
+	private static final String emailableReportTemplateFile = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"reporting"+File.separator+"OrangeHRM-emailable-report-template.html").replace("\\", "/") ;
+//	private static final String emailableReportTemplateFile = "E:\\workspace\\orangehrm\\src\\reporting\\OrangeHRM-emailable-report-template.html";
 	
 	@Override
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {

@@ -1,5 +1,6 @@
 package testScripts;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -19,8 +20,8 @@ public class AdminLogin extends Base {
 	//WebDriver driver;
 	OrangeHRMLogin login;
 	Base b ;
-	public String screenshotFilePath="" ;
-	public String reportspath="" ;
+	public String screenshotFilePath="";
+	public String reportspath="";
 	public String URL="";
 	public String intialReport = "";
 	
@@ -31,14 +32,19 @@ public class AdminLogin extends Base {
 	@BeforeMethod
 	public void load(ITestResult result) throws IOException {
 		b = new Base();
-		screenshotFilePath = b.getMapData("screenshotFilePath", 0);
-		System.out.println("checking"+screenshotFilePath);
-		reportspath = b.getMapData("reportspath", 0);
+//		screenshotFilePath = System.getProperty("user.dir")+"\\src\\libraries\\screenshots\\" ;
+		screenshotFilePath = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"libraries"+File.separator+"screenshots"+File.separator).replace("\\", "/") ;
+//		screenshotFilePath = b.getMapData("screenshotFilePath", 0);
+//		System.out.println("checking"+screenshotFilePath);
+		reportspath=(System.getProperty("user.dir")+File.separator+"src"+File.separator+"libraries"+File.separator+"reports"+File.separator).replace("\\", "/") ;
+//		reportspath = System.getProperty("user.dir")+"\\src\\libraries\\reports\\" ;
 		URL = b.getMapData("URL", 0);
-		intialReport = b.getMapData("intialReport", 0);
+		intialReport=(System.getProperty("user.dir")+File.separator+"test-output"+File.separator+"OrangeHRM-emailable-report-template.html").replace("\\", "/") ;
+//		intialReport = System.getProperty("user.dir")+"\\test-output\\OrangeHRM-emailable-report-template.html";
 		intialize("chrome");
 		Reporter.setCurrentTestResult(result);
 		Reporter.log("Browser Initialized");
+		
 		
 		
 		

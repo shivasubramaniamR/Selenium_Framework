@@ -101,10 +101,11 @@ public class Base {
 		
 		
 		  String fileName=filename+testMethodName+"_"+CurrentDateandTime()+".jpeg";
-		  System.out.println(filename);
+		  System.out.println("filename="+filename);
 		  File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		  File screenshotName = new File (fileName);
 		  FileHandler.copy(scrFile, screenshotName);
+		  System.out.println("filename="+filename);
 		  Reporter.log("<br><img src='"+fileName+"' height='300' width='300'/><br>");
 		 
 	}
@@ -142,9 +143,10 @@ public class Base {
 	}
 	
 	public  Map<String,  Map<String, String>> setMapData(int index) throws IOException {
-		 
-		  String path = "E:/workspace/orangehrm/src/testData/TestDataSheet.xlsx";
-		  
+		
+		String path = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"testData"+File.separator+"TestDataSheet.xlsx").replace("\\", "/") ;
+//		  String path = "E:/workspace/orangehrm/src/testData/TestDataSheet.xlsx";
+		  System.out.println("path"+path);
 		  FileInputStream fis = new FileInputStream(path);
 	
 		  Workbook workbook = new XSSFWorkbook(fis);
@@ -252,7 +254,7 @@ public class Base {
 	}
 	
 	public void writeToExcel(int index,String uname,String pwd) throws EncryptedDocumentException, IOException {
-		String path = "E:/workspace/orangehrm/src/testData/TestDataSheet.xlsx";
+		String path = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"testData"+File.separator+"TestDataSheet.xlsx").replace("\\", "/") ;
 		InputStream inp = new FileInputStream(path); 
 	    Workbook wb = WorkbookFactory.create(inp); 
 	    Sheet sheet = wb.getSheetAt(index); 

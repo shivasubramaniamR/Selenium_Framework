@@ -93,7 +93,7 @@ public class DeleteUser  extends Base{
 		
 		b.javascriptElemClick(duser.checkbox);
 		
-				
+		b.ElementWait(duser.delete);		
 		b.click(duser.delete);
 		
 		b.click(duser.ok);

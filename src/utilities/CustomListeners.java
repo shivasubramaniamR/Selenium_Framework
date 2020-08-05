@@ -7,7 +7,7 @@ import org.testng.ITestResult;
 
 public class CustomListeners extends Base implements ITestListener{
 	Base b;
-	public String screenshotFilePath = "E:/workspace/CaseStudy/src/libraries/screenshots/";
+	public String screenshotFilePath = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"libraries"+File.separator+"screenshots"+File.separator).replace("\\", "/") ;
 
 	@Override
 	public void onFinish(ITestContext arg0) {

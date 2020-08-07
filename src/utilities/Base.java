@@ -116,8 +116,16 @@ public class Base {
 	}
 	
 	public void ElementWait(By xpath) {
-		wait=new WebDriverWait(driver, 20);
+		wait=new WebDriverWait(driver, 900);
 		wait.until(ExpectedConditions.visibilityOfElementLocated((xpath)));
+		
+	}
+	
+	public void ElementWaitClickable(By xpath) {
+		 Actions action = new Actions(driver);
+		 WebElement we = driver.findElement(xpath);
+		 action.moveToElement(we).moveToElement(driver.findElement(xpath)).click().build().perform();
+		
 	}
 	
 //	public void fileMove(String source,String dest,String methodname) {

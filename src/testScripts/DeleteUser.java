@@ -91,8 +91,11 @@ public class DeleteUser  extends Base{
 		
 		b.ElementWait(cuser.get_username);
 
-		
-		b.javascriptElemClick(duser.checkbox);
+		b.ElementWaitClickable(duser.checkbox);
+//		b.javascriptElemClick(duser.checkbox);
+//		b.ElementWait(duser.checkbox);
+//		Thread.sleep(5000);
+//		b.click(duser.checkbox);
 		
 		b.ElementWait(duser.delete);		
 		b.click(duser.delete);

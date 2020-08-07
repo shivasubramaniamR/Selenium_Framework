@@ -14,7 +14,7 @@
       </class> <!-- testScripts.AdminLogin -->
       <class name="testScripts.DeleteUser">
         <methods>
-          <include name="business_logic"/>
+          <include name="orageHRM_delete_user"/>
           <include name="cleanup"/>
           <include name="load"/>
         </methods>

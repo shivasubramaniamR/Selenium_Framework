@@ -43,8 +43,8 @@ public class Base {
 	
 	public static WebDriver driver;
 	WebDriverWait wait;
-	public static String chromedriverexecutablepath = "E:\\workspace\\CaseStudy\\src\\libraries\\chromedriver.exe";
-	public static String firefoxdriverexecutablepath = "E:\\workspace\\CaseStudy\\src\\libraries\\geckodriver.exe";
+	public static String chromedriverexecutablepath = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"libraries"+File.separator+"chromedriver.exe").replace("\\", "/") ;
+	public static String firefoxdriverexecutablepath = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"libraries"+File.separator+"geckodriver.exe").replace("\\", "/") ;
 	
 	
 	
@@ -66,6 +66,7 @@ public class Base {
 		
 		
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
+		driver.manage().window().maximize();
 					
 		
 	}
@@ -101,11 +102,11 @@ public class Base {
 		
 		
 		  String fileName=filename+testMethodName+"_"+CurrentDateandTime()+".jpeg";
-		  System.out.println("filename="+filename);
+		  //System.out.println("filename="+filename);
 		  File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		  File screenshotName = new File (fileName);
 		  FileHandler.copy(scrFile, screenshotName);
-		  System.out.println("filename="+filename);
+		  //System.out.println("filename="+filename);
 		  Reporter.log("<br><img src='"+fileName+"' height='300' width='300'/><br>");
 		 
 	}
@@ -154,7 +155,7 @@ public class Base {
 		
 		String path = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"testData"+File.separator+"TestDataSheet.xlsx").replace("\\", "/") ;
 //		  String path = "E:/workspace/orangehrm/src/testData/TestDataSheet.xlsx";
-		  System.out.println("path"+path);
+		  //System.out.println("path"+path);
 		  FileInputStream fis = new FileInputStream(path);
 	
 		  Workbook workbook = new XSSFWorkbook(fis);

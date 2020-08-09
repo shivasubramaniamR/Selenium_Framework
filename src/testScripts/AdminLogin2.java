@@ -16,8 +16,8 @@ import utilities.Base;
 import utilities.CustomListeners;
 
 @Listeners(CustomListeners.class)
-public class AdminLogin extends Base {
-
+public class AdminLogin2 extends Base {
+	//WebDriver driver;
 	OrangeHRMLogin login;
 	Base b ;
 	public String screenshotFilePath="";
@@ -32,15 +32,18 @@ public class AdminLogin extends Base {
 	@BeforeMethod
 	public void load(ITestResult result) throws IOException {
 		b = new Base();
+//		screenshotFilePath = System.getProperty("user.dir")+"\\src\\libraries\\screenshots\\" ;
 		screenshotFilePath = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"libraries"+File.separator+"screenshots"+File.separator).replace("\\", "/") ;
+//		screenshotFilePath = b.getMapData("screenshotFilePath", 0);
+//		System.out.println("checking"+screenshotFilePath);
 		reportspath=(System.getProperty("user.dir")+File.separator+"src"+File.separator+"libraries"+File.separator+"reports"+File.separator).replace("\\", "/") ;
+//		reportspath = System.getProperty("user.dir")+"\\src\\libraries\\reports\\" ;
 		URL = b.getMapData("URL", 0);
 		intialReport=(System.getProperty("user.dir")+File.separator+"test-output"+File.separator+"OrangeHRM-emailable-report-template.html").replace("\\", "/") ;
-		
+//		intialReport = System.getProperty("user.dir")+"\\test-output\\OrangeHRM-emailable-report-template.html";
 		intialize("chrome");
 		Reporter.setCurrentTestResult(result);
-		Reporter.log("Step 1 : Browser Initialized------PASS");
-		
+		Reporter.log("Browser Initialized");
 		
 		
 		
@@ -51,8 +54,8 @@ public class AdminLogin extends Base {
 	public void cleanup(ITestResult result) {
 		driver.quit();
 		Reporter.setCurrentTestResult(result);
-		Reporter.log("<br>Browser Closed------PASS");
-
+		Reporter.log("<br>Browser Closed");
+//		b.fileMove(intialReport, reportspath,this.getClass().getName());
 	}
 	
 	@Test(enabled=true)
@@ -62,20 +65,20 @@ public class AdminLogin extends Base {
 				
 		login = new OrangeHRMLogin(b.returnDriver());
 		b.loadURL(URL);
-		Reporter.log("<br>Step 2 : Url Loaded------PASS");
+		Reporter.log("<br>Url Loaded");
 		
 		
 		login.login(b.getMapData("username", 1),b.getMapData("password", 1));
-		Reporter.log("<br>Step 3 : Application logged in------PASS");
+		Reporter.log("<br>Application logged in");
 		
 		b.ElementWait(login.welcome_msg);
 		Assert.assertEquals(b.getText(login.welcome_msg),"Welcome Admin");
 		
 		b.screenShot(screenshotFilePath, this.getClass().getName());
-		Reporter.log("<br>Step 4 : Validating the Welcome Message------PASS");
+		Reporter.log("<br>Validating the Welcome Message");
 		
 		}catch (Exception e) {
-			Reporter.log("<br>Test Step Failed------FAIL");
+			Reporter.log("<br>Test Step Failed");
 			Assert.fail(e.getMessage());
 			
 			

@@ -18,7 +18,8 @@ import utilities.CustomListeners;
 import utilities.ProjectUtils;
 
 @Listeners(CustomListeners.class)
-public class CreateUser extends Base {
+public class CreateUser2 extends Base {
+	//WebDriver driver;
 	OrangeHRMLogin login;
 	OrangeHRMCreateUser cuser;
 	Base b ;
@@ -44,7 +45,7 @@ public class CreateUser extends Base {
 		intialReport=(System.getProperty("user.dir")+File.separator+"test-output"+File.separator+"OrangeHRM-emailable-report-template.html").replace("\\", "/") ;
 		intialize("chrome");
 		Reporter.setCurrentTestResult(result);
-		Reporter.log("Step 1 : Browser Initialized------PASS");
+		Reporter.log("Browser Initialized");
 		
 		
 		
@@ -54,7 +55,7 @@ public class CreateUser extends Base {
 	public void cleanup(ITestResult result) {
 		driver.quit();
 		Reporter.setCurrentTestResult(result);
-		Reporter.log("<br>Browser Closed------PASS");
+		Reporter.log("<br>Browser Closed");
 
 	}
 	
@@ -67,54 +68,50 @@ public class CreateUser extends Base {
 		cuser = new OrangeHRMCreateUser();
 		pu = new ProjectUtils();
 		b.loadURL(URL);
-		Reporter.log("<br>Step 2 : Url Loaded------PASS");
+		Reporter.log("<br>Url Loaded");
 		
 		login.login(b.getMapData("username", 1),b.getMapData("password", 1));
-		Reporter.log("<br>Step 3 : Application logged in------PASS");
+		Reporter.log("<br>Application logged in");
 		
+
 		
 		b.selectDropDown(cuser.User_Role,b.getMapData("user_role",1));
-		Reporter.log("<br>Step 4 : User Role Selected------PASS");
 		
 		b.setText(cuser.emp_name, "e");
 		String empName = pu.emp_name(pu.getempNames(cuser.emp_names_list));
 		b.setText(cuser.emp_name, empName);
-		Reporter.log("<br>Step 5 : Employee Name Entered------PASS");
+		System.out.println(empName);
 		
 		String uname = b.randomString(empName.length()).trim();
+		
 		b.setText(cuser.usernmae, uname);
-		Reporter.log("<br>Step 6 : User Name Entered------PASS");
+		System.out.println(uname);
 		
 		b.selectDropDown(cuser.emp_status, b.getMapData("emp_status", 1));
-		Reporter.log("<br>Step 7 : Employee Status Selected------PASS");
-		
 		String pass = b.randomStringPassword(empName, 9).trim();
+		
 		b.setText(cuser.password, pass);
-		Reporter.log("<br>Step 8 : Password  Entered------PASS");
+		System.out.println(pass);
 		
 		b.setText(cuser.confirm_password, pass);
-		Reporter.log("<br>Step 9 : Confirm Password  Entered------PASS");
 		
 		b.click(cuser.save);
-		Reporter.log("<br>Step 10 : Save Button Clicked------PASS");
-		
 		b.isElementPresent(cuser.save);
+		
 		b.ElementWait(cuser.search_username);
+		
 		b.setText(cuser.search_username, uname);
-		Reporter.log("<br>Step 11 : Username  Entered in search Field------PASS");
 		
 		b.click(cuser.search);
-		Reporter.log("<br>Step 12 : Search button Clicked------PASS");
-		
 		String Currentusername = b.getText(cuser.get_username);
+		
 		Assert.assertEquals(Currentusername, uname, "Validation of Username after Save");
 		b.screenShot(screenshotFilePath, this.getClass().getName());
-		Reporter.log("<br>Step 13 : Validating the Username after Save------PASS");
+		Reporter.log("<br>Validating the Username after Save");
 		
 		b.writeToExcel(2, uname, pass);
 		
 		}catch (Exception e) {
-			Reporter.log("<br>Test Step Failed------FAIL");
 			Assert.fail(e.getMessage());
 			
 		}

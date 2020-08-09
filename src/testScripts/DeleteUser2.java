@@ -12,6 +12,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import pageObjects.OrangeHRMCreateUser;
+import pageObjects.OrangeHRMDeleteUser;
 import pageObjects.OrangeHRMEditUser;
 import pageObjects.OrangeHRMLogin;
 import utilities.Base;
@@ -19,10 +20,12 @@ import utilities.CustomListeners;
 
 
 @Listeners(CustomListeners.class)
-public class EditUser extends Base {
+public class DeleteUser2  extends Base{
+	//WebDriver driver;
 	OrangeHRMLogin login;
 	OrangeHRMCreateUser cuser;
 	OrangeHRMEditUser euser;
+	OrangeHRMDeleteUser duser;
 	Base b ;
 	
 	public String screenshotFilePath="" ;
@@ -47,7 +50,7 @@ public class EditUser extends Base {
 		TestDataSheet = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"testData"+File.separator+"TestDataSheet.xlsx").replace("\\", "/") ;
 		intialize("chrome");
 		Reporter.setCurrentTestResult(result);
-		Reporter.log("Step 1 : Browser Initialized------PASS");
+		Reporter.log("Browser Initialized");
 		
 		
 		
@@ -57,70 +60,67 @@ public class EditUser extends Base {
 	public void cleanup(ITestResult result) {
 		driver.quit();
 		Reporter.setCurrentTestResult(result);
-		Reporter.log("<br>Browser Closed------PASS");
-
+		Reporter.log("<br>Browser Closed");
+//		b.fileMove(intialReport, reportspath,this.getClass().getName());
 	}
 	
 	@Test(enabled=true)
-	public void orageHRM_edit_user() {
+	public void orageHRM_delete_user() {
 		
 		try {
 				
 		login = new OrangeHRMLogin(b.returnDriver());
 		cuser = new OrangeHRMCreateUser();
 		euser = new OrangeHRMEditUser();
+		duser = new OrangeHRMDeleteUser();
 		
 		b.loadURL(URL);
-		Reporter.log("<br>Step 2 : Url Loaded------PASS");
+		Reporter.log("<br>Url Loaded");
 		
 		login.login(b.getMapData("username", 1),b.getMapData("password", 1));
-		Reporter.log("<br>Step 3 : Application logged in------PASS");
+		Reporter.log("<br>Application logged in");
 		
 
 		
 		b.click(euser.Admin);
-		Reporter.log("<br>Step 4 : Admin button clicked------PASS");
 		
 		b.setText(cuser.search_username, b.getCellValueFromExcel(TestDataSheet, 2, 0));
-		Reporter.log("<br>Step 5 : Username Entered in search Field ------PASS");
 		
 		b.click(cuser.search);
-		b.javascriptElemClick(cuser.get_username1);
-		Reporter.log("<br>Step 6 : Search Button clicked------PASS");
 		
-		b.click(cuser.save);
-		String user_role_change =b.getMapData("user_role_edit", 1); 
-		b.selectDropDown(cuser.User_Role, user_role_change);
-		Reporter.log("<br>Step 7 : User Role Updated------PASS");
 		
-		String username_change = "";
-		username_change = b.getaattribute(cuser.usernmae);
-		username_change=username_change+"A";
-		b.setText(cuser.usernmae, username_change);
-		Reporter.log("<br>Step 8 : Username Updated------PASS");
+		b.ElementWait(cuser.get_username);
+
+		b.ElementWaitClickable(duser.checkbox);
+//		b.javascriptElemClick(duser.checkbox);
+//		b.ElementWait(duser.checkbox);
+//		Thread.sleep(5000);
+//		b.click(duser.checkbox);
 		
-		b.click(cuser.save);
-		Reporter.log("<br>Step 9 : Save Button Clicked------PASS");
+		b.ElementWait(duser.delete);		
+		b.click(duser.delete);
 		
-		b.isElementPresent(cuser.save);
-		b.ElementWait(cuser.search_username);
-		b.setText(cuser.search_username, username_change);
-		Reporter.log("<br>Step 10 : Username entered in search Field------PASS");
+		b.click(duser.ok);
+		
+		b.setText(cuser.search_username, b.getCellValueFromExcel(TestDataSheet, 2, 0));
+		
+		b.ElementWait(cuser.search);
 		
 		b.click(cuser.search);
-		Reporter.log("<br>Step 11 : Search Button Clicked------PASS");
 		
-		String current_username = b.getText(cuser.get_username);
-		String Current_role = b.getText(cuser.get_userrole);
-		Assert.assertEquals(current_username, username_change);
-		Assert.assertEquals(Current_role, user_role_change);
+		int count = b.webtablecount(duser.table_count);
+		
+		System.out.println(count);
+		
+		Assert.assertEquals(count,2);
+		
+		
 		b.screenShot(screenshotFilePath, this.getClass().getName());
-		Reporter.log("<br>Step 12 : Validating the Username  and user role after Edit------PASS");
+		Reporter.log("<br>Validating the Username  after Deletion");
 		
-		b.writeToExcel(2, username_change, username_change);
+		
 		
 		}catch (Exception e) {
-			Reporter.log("<br>Test Step Failed------FAIL");
 			Assert.fail(e.getMessage());
 			
 		}

@@ -21,7 +21,6 @@ import utilities.CustomListeners;
 
 @Listeners(CustomListeners.class)
 public class DeleteUser  extends Base{
-	//WebDriver driver;
 	OrangeHRMLogin login;
 	OrangeHRMCreateUser cuser;
 	OrangeHRMEditUser euser;
@@ -50,8 +49,7 @@ public class DeleteUser  extends Base{
 		TestDataSheet = (System.getProperty("user.dir")+File.separator+"src"+File.separator+"testData"+File.separator+"TestDataSheet.xlsx").replace("\\", "/") ;
 		intialize("chrome");
 		Reporter.setCurrentTestResult(result);
-		Reporter.log("Browser Initialized");
-		
+		Reporter.log("Step 1 : Browser Initialized------PASS");
 		
 		
 	}
@@ -60,8 +58,7 @@ public class DeleteUser  extends Base{
 	public void cleanup(ITestResult result) {
 		driver.quit();
 		Reporter.setCurrentTestResult(result);
-		Reporter.log("<br>Browser Closed");
-//		b.fileMove(intialReport, reportspath,this.getClass().getName());
+		Reporter.log("<br>Browser Closed------PASS");
 	}
 	
 	@Test(enabled=true)
@@ -75,52 +72,49 @@ public class DeleteUser  extends Base{
 		duser = new OrangeHRMDeleteUser();
 		
 		b.loadURL(URL);
-		Reporter.log("<br>Url Loaded");
+		Reporter.log("<br>Step 2 : Url Loaded------PASS");
 		
 		login.login(b.getMapData("username", 1),b.getMapData("password", 1));
-		Reporter.log("<br>Application logged in");
+		Reporter.log("<br>Step 3 : Application logged in------PASS");
 		
 
 		
 		b.click(euser.Admin);
+		Reporter.log("<br>Step 4 : Admin button Clicked------PASS");
 		
 		b.setText(cuser.search_username, b.getCellValueFromExcel(TestDataSheet, 2, 0));
+		Reporter.log("<br>Step 5 : Username entered in search Field------PASS");
 		
 		b.click(cuser.search);
-		
+		Reporter.log("<br>Step 6 : Search button clicked------PASS");
 		
 		b.ElementWait(cuser.get_username);
-
 		b.ElementWaitClickable(duser.checkbox);
-//		b.javascriptElemClick(duser.checkbox);
-//		b.ElementWait(duser.checkbox);
-//		Thread.sleep(5000);
-//		b.click(duser.checkbox);
+		Reporter.log("<br>Step 7 : Checkbox clicked------PASS");
 		
 		b.ElementWait(duser.delete);		
 		b.click(duser.delete);
+		Reporter.log("<br>Step 8 : Delete Button clicked------PASS");
 		
 		b.click(duser.ok);
+		Reporter.log("<br>Step 9 : Ok Prompt Button clicked------PASS");
 		
 		b.setText(cuser.search_username, b.getCellValueFromExcel(TestDataSheet, 2, 0));
+		Reporter.log("<br>Step 10 : username entered in search field------PASS");
 		
 		b.ElementWait(cuser.search);
-		
 		b.click(cuser.search);
+		Reporter.log("<br>Step 11 : Search Button Clicked------PASS");
 		
 		int count = b.webtablecount(duser.table_count);
-		
-		System.out.println(count);
-		
 		Assert.assertEquals(count,2);
-		
-		
 		b.screenShot(screenshotFilePath, this.getClass().getName());
-		Reporter.log("<br>Validating the Username  after Deletion");
+		Reporter.log("<br>Step 12 : Validating the Username  after Deletion------PASS");
 		
 		
 		
 		}catch (Exception e) {
+			Reporter.log("<br>Test Step Failed------FAIL");
 			Assert.fail(e.getMessage());
 			
 		}

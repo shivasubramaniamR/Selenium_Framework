@@ -1,36 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [first]">
   <listeners>
     <listener class-name="reporting.CustomTestNGReporter"/>
   </listeners>
-  <test name="OrangeHRM(failed)">
+  <test thread-count="5" name="OrangeHRM(failed)">
     <classes>
       <class name="testScripts.AdminLogin">
         <methods>
+          <include name="orageHRM_admin_login"/>
           <include name="load"/>
           <include name="cleanup"/>
         </methods>
       </class> <!-- testScripts.AdminLogin -->
-      <class name="testScripts.DeleteUser">
-        <methods>
-          <include name="orageHRM_delete_user"/>
-          <include name="cleanup"/>
-          <include name="load"/>
-        </methods>
-      </class> <!-- testScripts.DeleteUser -->
-      <class name="testScripts.EditUser">
-        <methods>
-          <include name="cleanup"/>
-          <include name="load"/>
-        </methods>
-      </class> <!-- testScripts.EditUser -->
-      <class name="testScripts.CreateUser">
-        <methods>
-          <include name="cleanup"/>
-          <include name="load"/>
-        </methods>
-      </class> <!-- testScripts.CreateUser -->
     </classes>
   </test> <!-- OrangeHRM(failed) -->
 </suite> <!-- Failed suite [first] -->

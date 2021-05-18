@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>OrangeHRM</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Aug 07 15:37:43 IST 2020</td>
+<td>Started on:</td><td>Tue May 18 11:23:48 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>104 seconds (104547 ms)</td>
+<tr><td>Total time:</td><td>108 seconds (108818 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,68 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testScripts.AdminLogin.orageHRM_admin_login()'><b>orageHRM_admin_login</b><br>Test class: testScripts.AdminLogin<br/>
+<a href="#Output-275056979" onClick='toggleBox("Output-275056979", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-275056979" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-275056979">
+<br>Step 2 : Url Loaded------PASS<br/>
+<br>Step 3 : Application logged in------PASS<br/>
+<br><img src='C:/Users/Shiva/git/Selenium_Framework/src/libraries/screenshots/orageHRM_admin_login_18_05_2021_11_24_06.jpeg' height='300' width='300'/><br><br/>
+<br>Browser Closed------PASS<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [Welcome Admin] but found [Welcome Paul]
+	at testScripts.AdminLogin.orageHRM_admin_login(AdminLogin.java:73)
+	at java.util.ArrayList.forEach(Unknown Source)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace275056979", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace275056979'><pre>java.lang.AssertionError: expected [Welcome Admin] but found [Welcome Paul]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at testScripts.AdminLogin.orageHRM_admin_login(AdminLogin.java:73)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>13</td>
+<td>testScripts.AdminLogin@67205a84</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,73 +137,78 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScripts.AdminLogin.orageHRM_admin_login()'><b>orageHRM_admin_login</b><br>Test class: testScripts.AdminLogin<br/>
-<a href="#Output-2018260103" onClick='toggleBox("Output-2018260103", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-2018260103" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2018260103">
-Browser Initialized<br/>
-<br>Url Loaded<br/>
-<br>Application logged in<br/>
-<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.AdminLogin_07_08_2020_15_38_01.jpeg' height='300' width='300'/><br><br/>
-<br>Validating the Welcome Message<br/>
-<br>Browser Closed<br/>
-</div>
-</td>
-<td></td>
-<td>12</td>
-<td>testScripts.AdminLogin@3ffc5af1</td></tr>
-<tr>
 <td title='testScripts.CreateUser.orageHRM_create_user()'><b>orageHRM_create_user</b><br>Test class: testScripts.CreateUser<br/>
-<a href="#Output-1699578227" onClick='toggleBox("Output-1699578227", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-164439551" onClick='toggleBox("Output-164439551", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1699578227" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1699578227">
-Browser Initialized<br/>
-<br>Url Loaded<br/>
-<br>Application logged in<br/>
-<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.CreateUser_07_08_2020_15_38_34.jpeg' height='300' width='300'/><br><br/>
-<br>Validating the Username after Save<br/>
-<br>Browser Closed<br/>
+<a href="#Output-164439551" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-164439551">
+<br>Step 2 : Url Loaded------PASS<br/>
+<br>Step 3 : Application logged in------PASS<br/>
+<br>Step 4 : User Role Selected------PASS<br/>
+<br>Step 5 : Employee Name Entered------PASS<br/>
+<br>Step 6 : User Name Entered------PASS<br/>
+<br>Step 7 : Employee Status Selected------PASS<br/>
+<br>Step 8 : Password  Entered------PASS<br/>
+<br>Step 9 : Confirm Password  Entered------PASS<br/>
+<br>Step 10 : Save Button Clicked------PASS<br/>
+<br>Step 11 : Username  Entered in search Field------PASS<br/>
+<br>Step 12 : Search button Clicked------PASS<br/>
+<br><img src='C:/Users/Shiva/git/Selenium_Framework/src/libraries/screenshots/testScripts.CreateUser_18_05_2021_11_24_31.jpeg' height='300' width='300'/><br><br/>
+<br>Step 13 : Validating the Username after Save------PASS<br/>
+<br>Browser Closed------PASS<br/>
 </div>
 </td>
 <td></td>
-<td>27</td>
-<td>testScripts.CreateUser@5e5792a0</td></tr>
+<td>23</td>
+<td>testScripts.CreateUser@7d0587f1</td></tr>
 <tr>
 <td title='testScripts.DeleteUser.orageHRM_delete_user()'><b>orageHRM_delete_user</b><br>Test class: testScripts.DeleteUser<br/>
-<a href="#Output-836972194" onClick='toggleBox("Output-836972194", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1531545666" onClick='toggleBox("Output-1531545666", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-836972194" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-836972194">
-Browser Initialized<br/>
-<br>Url Loaded<br/>
-<br>Application logged in<br/>
-<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.DeleteUser_07_08_2020_15_39_26.jpeg' height='300' width='300'/><br><br/>
-<br>Validating the Username  after Deletion<br/>
-<br>Browser Closed<br/>
-</div>
-</td>
-<td></td>
-<td>19</td>
-<td>testScripts.DeleteUser@3532ec19</td></tr>
-<tr>
-<td title='testScripts.EditUser.orageHRM_edit_user()'><b>orageHRM_edit_user</b><br>Test class: testScripts.EditUser<br/>
-<a href="#Output-1060935276" onClick='toggleBox("Output-1060935276", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1060935276" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1060935276">
-Browser Initialized<br/>
-<br>Url Loaded<br/>
-<br>Application logged in<br/>
-<br><img src='E:/workspace/orangehrm/src/libraries/screenshots/testScripts.EditUser_07_08_2020_15_39_01.jpeg' height='300' width='300'/><br><br/>
-<br>Validating the Username  and user role after Edit<br/>
-<br>Browser Closed<br/>
+<a href="#Output-1531545666" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1531545666">
+<br>Step 2 : Url Loaded------PASS<br/>
+<br>Step 3 : Application logged in------PASS<br/>
+<br>Step 4 : Admin button Clicked------PASS<br/>
+<br>Step 5 : Username entered in search Field------PASS<br/>
+<br>Step 6 : Search button clicked------PASS<br/>
+<br>Step 7 : Checkbox clicked------PASS<br/>
+<br>Step 8 : Delete Button clicked------PASS<br/>
+<br>Step 9 : Ok Prompt Button clicked------PASS<br/>
+<br>Step 10 : username entered in search field------PASS<br/>
+<br>Step 11 : Search Button Clicked------PASS<br/>
+<br><img src='C:/Users/Shiva/git/Selenium_Framework/src/libraries/screenshots/testScripts.DeleteUser_18_05_2021_11_25_35.jpeg' height='300' width='300'/><br><br/>
+<br>Step 12 : Validating the Username  after Deletion------PASS<br/>
+<br>Browser Closed------PASS<br/>
 </div>
 </td>
 <td></td>
 <td>21</td>
-<td>testScripts.EditUser@26653222</td></tr>
+<td>testScripts.DeleteUser@2a17b7b6</td></tr>
+<tr>
+<td title='testScripts.EditUser.orageHRM_edit_user()'><b>orageHRM_edit_user</b><br>Test class: testScripts.EditUser<br/>
+<a href="#Output-663716901" onClick='toggleBox("Output-663716901", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-663716901" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-663716901">
+<br>Step 2 : Url Loaded------PASS<br/>
+<br>Step 3 : Application logged in------PASS<br/>
+<br>Step 4 : Admin button clicked------PASS<br/>
+<br>Step 5 : Username Entered in search Field ------PASS<br/>
+<br>Step 6 : Search Button clicked------PASS<br/>
+<br>Step 7 : User Role Updated------PASS<br/>
+<br>Step 8 : Username Updated------PASS<br/>
+<br>Step 9 : Save Button Clicked------PASS<br/>
+<br>Step 10 : Username entered in search Field------PASS<br/>
+<br>Step 11 : Search Button Clicked------PASS<br/>
+<br><img src='C:/Users/Shiva/git/Selenium_Framework/src/libraries/screenshots/testScripts.EditUser_18_05_2021_11_25_10.jpeg' height='300' width='300'/><br><br/>
+<br>Step 12 : Validating the Username  and user role after Edit------PASS<br/>
+<br>Browser Closed------PASS<br/>
+</div>
+</td>
+<td></td>
+<td>34</td>
+<td>testScripts.EditUser@5d76b067</td></tr>
 </table><p>
 </body>
 </html>

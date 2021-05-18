@@ -9,7 +9,7 @@
 			 
 			<class name="testScripts.CreateUser"/>
 			<class name="testScripts.EditUser"/>
-			<class name="testScripts.DeleteUser"/>   
+			<class name="testScripts.DeleteUser"/>  
 			
 		</classes>
 	
